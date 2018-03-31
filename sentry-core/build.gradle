@@ -1,0 +1,20 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.1.0'
+    }
+}
+
+apply plugin: 'org.junit.platform.gradle.plugin'
+
+dependencies {
+    compile project(':sentry-api')
+    compile project(':sentry-httpclient-api')
+    compile project(':sentry-storage-api')
+
+    testCompile("org.jetbrains.spek:spek-api:1.1.5")
+    testRuntime("org.jetbrains.spek:spek-junit-platform-engine:1.1.5")
+    testCompile("com.natpryce:hamkrest:1.4.2.2")
+}

@@ -2,3 +2,8 @@ rootProject.name = 'sentry-root'
 
 include 'sentry'
 include 'sentry-api'
+include 'sentry-core'
+include 'sentry-httpclient'
+include 'sentry-httpclient-api'
+include 'sentry-storage-api'
+

@@ -1,3 +1,7 @@
 dependencies {
     compile project(':sentry-api')
+    compile project(':sentry-core')
+    compile project(':sentry-httpclient')
+    compile project(':sentry-httpclient-api')
+    compile project(':sentry-storage-api')
 }
