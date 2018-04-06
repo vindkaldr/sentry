@@ -11,6 +11,10 @@ class DefaultSentry(
     private val httpClient: HttpClient,
     private val hashService: HashService
 ) : Sentry {
+    override suspend fun preview(url: String): String {
+        return httpClient.get(url)
+    }
+
     override suspend fun add(url: String) {
         require(url.isNotBlank())
         keyValueStorage.store(url, getHashedResource(url))
